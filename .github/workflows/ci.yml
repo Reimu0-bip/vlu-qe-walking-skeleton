@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request: # (Tùy chọn) Chạy test cả khi có Pull Request vào nhánh main
+  pull_request:
     branches:
       - main
 
@@ -21,8 +21,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20' # Bạn có thể đổi thành 18 hoặc phiên bản dự án đang dùng
-        cache: 'npm'       # Giúp tăng tốc độ cho các lần chạy sau
+        node-version: '20'
 
     # Bước 3: Cài đặt các thư viện (bao gồm Jest trong devDependencies)
     - name: Cài đặt dependencies
